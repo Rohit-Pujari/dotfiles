@@ -1,0 +1,32 @@
+# Use pywal colors
+palette = "wal"
+
+[palettes.wal]
+foreground = "#e0d1cc"
+background = "#1a1512"
+color0 = "#1a1512"
+color1 = "#6D5A56"
+color2 = "#AE5345"
+color3 = "#92726B"
+color4 = "#A98678"
+color5 = "#8A7E83"
+color6 = "#B2928A"
+color7 = "#e0d1cc"
+
+[username]
+style_user = "bold color2"
+style_root = "bold color1"
+format = "[$user]($style) "
+
+[directory]
+style = "color4"
+
+[git_branch]
+style = "color5"
+
+[git_status]
+style = "color3"
+
+[character]
+success_symbol = "[➜](color2)"
+error_symbol = "[✗](color1)"

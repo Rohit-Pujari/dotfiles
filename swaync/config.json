@@ -1,0 +1,30 @@
+{
+  "position": "top-right",
+  "control-center-position": "top-right",
+
+  "layer": "overlay",
+  "control-center-layer": "overlay",
+
+  "css-override": "~/.config/swaync/style.css",
+
+  "notification-criteria": [],
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": [],
+  "widgets": ["dnd", "notifications", "mpris", "buttons"],
+
+  "widget-config": {
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "image-size": 48,
+      "image-radius": 8
+    },
+    "buttons": {
+      "clear-all": true,
+      "clear-all-label": "Clear All"
+    }
+  }
+}

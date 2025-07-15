@@ -1,0 +1,51 @@
+@import url("file:///home/rohitpujari/.cache/wal/colors-waybar.css");
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 0;
+  background: transparent;
+  color: @foreground;
+}
+
+window#waybar {
+  padding: 4px 8px;
+  color: @foreground;
+}
+
+#workspaces button {
+  padding: 2px 10px;
+  color: @color2;
+  background-color: @background;
+  margin: 2px 4px;
+  border-radius: 6px;
+}
+
+#workspaces button.active {
+  background: @background;
+  color: @color2;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background-color: @background;
+  color: @color2;
+}
+
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#tray,
+#custom-notifications,
+#custom-power {
+  font-weight: bold;
+  padding: 2px 10px;
+  margin: 2px 4px;
+  border-radius: 6px;
+  background-color: @background;
+  color: @color2;
+}

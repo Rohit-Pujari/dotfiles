@@ -1,0 +1,77 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "network",
+    "tray",
+    "custom/notifications",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "urgent": "",
+      "active": "x",
+      "default": ""
+    }
+  },
+  "hyprland/window": {
+    "max-length": 50,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%I:%M %p}", // 12-hour format with AM/PM
+    "format-alt": "{:%d-%m-%Y}",
+    "tooltip-format": "{:%A, %d %B %Y | %I:%M:%S %p}", // Tooltip also in 12-hr format
+    "interval": 60
+  },
+  "cpu": {
+    "format": "  {usage:2}%",
+    "interval": 5,
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {percentage:2}%",
+    "interval": 5,
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀  {ifname}",
+    "format-disconnected": "⚠  Disconnected",
+    "interval": 5,
+    "tooltip": false,
+    "on-click": "/home/rohitpujari/.config/waybar/wifi_rofi.sh"
+  },
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "~/.config/waybar/volume_control.sh",
+    "scroll-step": 5
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/power-menu.sh"
+  },
+  "custom/notifications": {
+    "format": "󰂚", // Notification bell icon
+    "tooltip": false,
+    "on-click": "swaync-client -t", // Toggle notification center
+    "on-click-right": "swaync-client -C", // Clear notifications
+    "on-scroll-up": "swaync-client -t",
+    "on-scroll-down": "swaync-client -t"
+  }
+}
